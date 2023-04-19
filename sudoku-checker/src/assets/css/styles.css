@@ -1,0 +1,22 @@
+.sudo-row {
+  display: inline-block;
+  margin-right: 1vw;
+}
+
+.tile-row {
+  margin-top: 0.5vh;
+}
+
+.sudoku-grid {
+  width: 51vw;
+  margin: auto;
+}
+
+.sudoku-box {
+  resize: none;
+  display: inline-block;
+  width: 5vw;
+  height: 5vh;
+  text-align: center;
+  font-size: 2rem;
+}

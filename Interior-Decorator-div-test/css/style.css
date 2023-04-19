@@ -1,0 +1,46 @@
+.column {
+  width: 33.3%;
+  float: left;
+  padding-left: 1.75%;
+  padding-right: 1.75%;
+  border: black solid 1px;
+  box-sizing: border-box;
+}
+
+.column-before {
+  background-color: rgba(255, 0, 0, 0.329);
+}
+
+.column-during {
+ background-color: rgba(255, 255, 0, 0.301);
+}
+
+.column-after{
+  background-color: rgba(128, 128, 128, 0.308);
+}
+
+.column h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.column p {
+  margin-top: none;
+}
+
+.index {
+  display: flex;
+  justify-content: center;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+hr {
+  opacity: 65%;
+}

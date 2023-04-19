@@ -1,0 +1,481 @@
+{
+  "states": [
+    {
+      "state_id": 1,
+      "name": "California",
+      "park_count": 9
+    },
+    {
+      "state_id": 2,
+      "name": "Alaska",
+      "park_count": 8
+    },
+    {
+      "state_id": 3,
+      "name": "Utah",
+      "park_count": 5
+    },
+    {
+      "state_id": 4,
+      "name": "Colorado",
+      "park_count": 4
+    },
+    {
+      "state_id": 5,
+      "name": "Arizona",
+      "park_count": 3
+    },
+    {
+      "state_id": 6,
+      "name": "Florida",
+      "park_count": 3
+    },
+    {
+      "state_id": 7,
+      "name": "Washington",
+      "park_count": 3
+    },
+    {
+      "state_id": 8,
+      "name": "Hawaii",
+      "park_count": 2
+    },
+    {
+      "state_id": 9,
+      "name": "New Mexico",
+      "park_count": 2
+    },
+    {
+      "state_id": 10,
+      "name": "South Dakota",
+      "park_count": 2
+    },
+    {
+      "state_id": 11,
+      "name": "Texas",
+      "park_count": 2
+    },
+    {
+      "state_id": 12,
+      "name": "Montana",
+      "park_count": 2
+    },
+    {
+      "state_id": 13,
+      "name": "Nevada",
+      "park_count": 2
+    },
+    {
+      "state_id": 14,
+      "name": "Wyoming",
+      "park_count": 2
+    },
+    {
+      "state_id": 15,
+      "name": "American Samoa",
+      "park_count": 1
+    },
+    {
+      "state_id": 16,
+      "name": "Arkansas",
+      "park_count": 1
+    },
+    {
+      "state_id": 17,
+      "name": "Indiana",
+      "park_count": 1
+    },
+    {
+      "state_id": 18,
+      "name": "Kentucky",
+      "park_count": 1
+    },
+    {
+      "state_id": 19,
+      "name": "Maine",
+      "park_count": 1
+    },
+    {
+      "state_id": 20,
+      "name": "Michigan",
+      "park_count": 1
+    },
+    {
+      "state_id": 21,
+      "name": "Minnesota",
+      "park_count": 1
+    },
+    {
+      "state_id": 22,
+      "name": "Missouri",
+      "park_count": 1
+    },
+    {
+      "state_id": 23,
+      "name": "North Dakota",
+      "park_count": 1
+    },
+    {
+      "state_id": 24,
+      "name": "Ohio",
+      "park_count": 1
+    },
+    {
+      "state_id": 25,
+      "name": "Oregon",
+      "park_count": 1
+    },
+    {
+      "state_id": 26,
+      "name": "South Carolina",
+      "park_count": 1
+    },
+    {
+      "state_id": 27,
+      "name": "U.S. Virgin Islands",
+      "park_count": 1
+    },
+    {
+      "state_id": 28,
+      "name": "Virginia",
+      "park_count": 1
+    },
+    {
+      "state_id": 29,
+      "name": "West Virginia",
+      "park_count": 1
+    },
+    {
+      "state_id": 30,
+      "name": "Idaho",
+      "park_count": 1
+    },
+    {
+      "state_id": 31,
+      "name": "North Carolina",
+      "park_count": 1
+    },
+    {
+      "state_id": 32,
+      "name": "Tennessee",
+      "park_count": 1
+    }
+  ],
+  "parks": [
+    {
+      "park_id": 1,
+      "state_id": 19,
+      "name": "Acadia"
+    },
+    {
+      "park_id": 2,
+      "state_id": 15,
+      "name": "American Samoa"
+    },
+    {
+      "park_id": 3,
+      "state_id": 3,
+      "name": "Arches"
+    },
+    {
+      "park_id": 4,
+      "state_id": 10,
+      "name": "Badlands"
+    },
+    {
+      "park_id": 5,
+      "state_id": 11,
+      "name": "Big Bend"
+    },
+    {
+      "park_id": 6,
+      "state_id": 6,
+      "name": "Biscayne"
+    },
+    {
+      "park_id": 7,
+      "state_id": 4,
+      "name": "Black Canyon of the Gunnison"
+    },
+    {
+      "park_id": 8,
+      "state_id": 3,
+      "name": "Bryce Canyon"
+    },
+    {
+      "park_id": 9,
+      "state_id": 3,
+      "name": "Canyonlands"
+    },
+    {
+      "park_id": 10,
+      "state_id": 3,
+      "name": "Capitol Reef"
+    },
+    {
+      "park_id": 11,
+      "state_id": 9,
+      "name": "Carlsbad Caverns"
+    },
+    {
+      "park_id": 12,
+      "state_id": 1,
+      "name": "Channel Islands"
+    },
+    {
+      "park_id": 13,
+      "state_id": 26,
+      "name": "Congaree"
+    },
+    {
+      "park_id": 14,
+      "state_id": 25,
+      "name": "Crater Lake"
+    },
+    {
+      "park_id": 15,
+      "state_id": 24,
+      "name": "Cuyahoga Valley"
+    },
+    {
+      "park_id": 16,
+      "state_id": 1,
+      "name": "Death Valley"
+    },
+    {
+      "park_id": 17,
+      "state_id": 2,
+      "name": "Denali"
+    },
+    {
+      "park_id": 18,
+      "state_id": 6,
+      "name": "Dry Tortugas"
+    },
+    {
+      "park_id": 19,
+      "state_id": 6,
+      "name": "Everglades"
+    },
+    {
+      "park_id": 20,
+      "state_id": 2,
+      "name": "Gates of the Arctic"
+    },
+    {
+      "park_id": 21,
+      "state_id": 22,
+      "name": "Gateway Arch"
+    },
+    {
+      "park_id": 22,
+      "state_id": 12,
+      "name": "Glacier"
+    },
+    {
+      "park_id": 23,
+      "state_id": 2,
+      "name": "Glacier Bay"
+    },
+    {
+      "park_id": 24,
+      "state_id": 5,
+      "name": "Grand Canyon"
+    },
+    {
+      "park_id": 25,
+      "state_id": 14,
+      "name": "Grand Teton"
+    },
+    {
+      "park_id": 26,
+      "state_id": 13,
+      "name": "Great Basin"
+    },
+    {
+      "park_id": 27,
+      "state_id": 4,
+      "name": "Great Sand Dunes"
+    },
+    {
+      "park_id": 28,
+      "state_id": 31,
+      "name": "Great Smoky Mountains"
+    },
+    {
+      "park_id": 29,
+      "state_id": 11,
+      "name": "Guadalupe Mountains"
+    },
+    {
+      "park_id": 30,
+      "state_id": 8,
+      "name": "Haleakalā"
+    },
+    {
+      "park_id": 31,
+      "state_id": 8,
+      "name": "Hawai'i Volcanoes"
+    },
+    {
+      "park_id": 32,
+      "state_id": 16,
+      "name": "Hot Springs"
+    },
+    {
+      "park_id": 33,
+      "state_id": 17,
+      "name": "Indiana Dunes"
+    },
+    {
+      "park_id": 34,
+      "state_id": 20,
+      "name": "Isle Royale"
+    },
+    {
+      "park_id": 35,
+      "state_id": 1,
+      "name": "Joshua Tree"
+    },
+    {
+      "park_id": 36,
+      "state_id": 2,
+      "name": "Katmai"
+    },
+    {
+      "park_id": 37,
+      "state_id": 2,
+      "name": "Kenai Fjords"
+    },
+    {
+      "park_id": 38,
+      "state_id": 1,
+      "name": "Kings Canyon"
+    },
+    {
+      "park_id": 39,
+      "state_id": 2,
+      "name": "Kobuk Valley"
+    },
+    {
+      "park_id": 40,
+      "state_id": 2,
+      "name": "Lake Clark"
+    },
+    {
+      "park_id": 41,
+      "state_id": 1,
+      "name": "Lassen Volcanic"
+    },
+    {
+      "park_id": 42,
+      "state_id": 18,
+      "name": "Mammoth Cave"
+    },
+    {
+      "park_id": 43,
+      "state_id": 4,
+      "name": "Mesa Verde"
+    },
+    {
+      "park_id": 44,
+      "state_id": 7,
+      "name": "Mount Rainier"
+    },
+    {
+      "park_id": 45,
+      "state_id": 28,
+      "name": "New River Gorge"
+    },
+    {
+      "park_id": 46,
+      "state_id": 7,
+      "name": "North Cascades"
+    },
+    {
+      "park_id": 47,
+      "state_id": 7,
+      "name": "Olympic"
+    },
+    {
+      "park_id": 48,
+      "state_id": 5,
+      "name": "Petrified Forest"
+    },
+    {
+      "park_id": 49,
+      "state_id": 1,
+      "name": "Pinnacles"
+    },
+    {
+      "park_id": 50,
+      "state_id": 1,
+      "name": "Redwood"
+    },
+    {
+      "park_id": 51,
+      "state_id": 4,
+      "name": "Rocky Mountain"
+    },
+    {
+      "park_id": 52,
+      "state_id": 5,
+      "name": "Saguaro"
+    },
+    {
+      "park_id": 53,
+      "state_id": 1,
+      "name": "Sequoia"
+    },
+    {
+      "park_id": 54,
+      "state_id": 28,
+      "name": "Shenandoah"
+    },
+    {
+      "park_id": 55,
+      "state_id": 23,
+      "name": "Theodore Roosevelt"
+    },
+    {
+      "park_id": 56,
+      "state_id": 27,
+      "name": "Virgin Islands"
+    },
+    {
+      "park_id": 57,
+      "state_id": 21,
+      "name": "Voyageurs"
+    },
+    {
+      "park_id": 58,
+      "state_id": 9,
+      "name": "White Sands"
+    },
+    {
+      "park_id": 59,
+      "state_id": 10,
+      "name": "Wind Cave"
+    },
+    {
+      "park_id": 60,
+      "state_id": 2,
+      "name": "Wrangell-St.Elias"
+    },
+    {
+      "park_id": 61,
+      "state_id": 12,
+      "name": "Yellowstone"
+    },
+    {
+      "park_id": 62,
+      "state_id": 1,
+      "name": "Yosemite"
+    },
+    {
+      "park_id": 63,
+      "state_id": 3,
+      "name": "Zion"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+/* Elements */
+
+body {
+  background-color: #272727;
+  color: white;
+}
+
+form {
+  font-size: large;
+}
+
+img {
+  width: 75%;
+  height: 75%;
+}
+
+/* Classes */
+
+.title-text {
+  font-size: 100;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.form-control {
+  background-color: #8d8d8d;
+  color: white;
+}

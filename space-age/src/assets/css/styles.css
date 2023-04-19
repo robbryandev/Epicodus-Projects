@@ -1,0 +1,46 @@
+/* Variables */
+
+:root {
+  --background: rgb(43, 41, 41);
+  --title-color: rgb(180, 146, 205);
+  --primary-color: rgb(114, 13, 187);
+  --primary-hover: rgb(94, 11, 154);
+  --second-hover: rgb(75, 0, 128);
+  --label-color: white;
+}
+
+/* Classes */
+
+.btn-primary {
+  accent-color: var(--primary-color);
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  accent-color: var(--primary-hover);
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+.btn-secondary:hover {
+  accent-color: var(--second-hover);
+  background-color: var(--second-hover);
+  border-color: var(--second-hover);
+}
+
+.center-left {
+  text-indent: -3.5vw;
+}
+
+/* Elements */
+
+pre {
+  color: var(--title-color);
+}
+
+label, h1, h3, p{
+  font-family: 'Kanit', sans-serif;
+  color: var(--label-color);
+  padding-top: 2vh;
+}

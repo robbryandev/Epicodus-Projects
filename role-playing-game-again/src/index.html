@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Role Playing Game...Again</title>
+</head>
+
+<body>
+	<div id="charSelect" class="container" style="text-align: center;">
+		<div id="choose-char">
+			<h1 style="font-family: fantasy ;">Choose your character:</h1>
+			
+			<div class="row">
+				<div class="col-4">
+					<div class="card" style="width: 18rem;">
+						<img src="assets/images/goatpope.png" class="card-img-top" alt="An image of goat pope.">
+						<div class="card-body">
+							<h5 class="card-title">Goat Pope</h5>
+							<p class="card-text">A powerful wizard wanting to clense the world of evil religion. All hail the blood
+								baptiser!</p>
+							<button id="wizard" type="click" class="btn btn-primary">Wizard</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="card" style="width: 18rem;">
+						<img src="assets/images/warrior.png" class="card-img-top" alt="An image of goat pope.">
+						<div class="card-body">
+							<h5 class="card-title">Billi the Berzerker</h5>
+							<p class="card-text">The strongest voodoo monkey in the un-known world. Shrinkin heads, and makin death
+								beds. </p>
+							<button id="warrior" type="click" class="btn btn-primary">Warrior</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="card" style="width: 18rem;">
+						<img src="assets/images/thief.png" class="card-img-top" alt="An image of goat pope.">
+						<div class="card-body">
+							<h5 class="card-title">Sneeki Peatmoss</h5>
+							<p class="card-text">In the darkness, no one expects the silent backstab. Cock-a-doodle-DEATH.</p>
+							<button id="thief" type="click" class="btn btn-primary">Thief</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container" id="battleScreen">
+		<div class="container">
+			<div id="charInfo" class="hidden">
+				<div class="row" style="margin-bottom: 3%">
+					<div class="col-6" id="hero">
+						<div class="card" style="width: 30rem;">
+							<img id="charImg" class="card-img-top">
+							<div class="card-body">
+								<h5 style="text-align: center;">Name: <span id="heroName"></span> LvL: <span id="heroLevel"></span></h5>
+								<h4 style="text-align: center;" class="card-title">Character Stats: </h5>
+									<p>Health: <span id="heroHealth"></span> <span id="atkDamage"></span></p>
+									<p>Attack: <span id="heroAttack"></span></p>
+									<p>Magic Attack: <span id="heroMagic"></span></p>
+									<p>Mana: <span id="heroMana"></span></p>
+									<p>Exp: <span id="heroExp"></span></p>
+									<h1 id="dead"></h1>
+							</div>
+						</div>
+					</div>
+					<div class="col-6" id="hero">
+						<div class="card" style="width: 30rem;">
+							<img id="badieImg" class="card-img-top">
+							<div class="card-body">
+								<h2 id="badieName"></h2>
+								<p><span id="badieHealth"></span> <span id="badieAtkDamage"></span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="moves" class="row hidden">
+				<div class="col-5" style="text-align: center;">
+					<button id="attack" type="click" class="btn btn-success" style="margin-right: 2%">Attack!</button>
+					<button id="magic" type="click" class="btn btn-warning" style="margin-right: 2%">Magic!</button>
+					<button id="heal" type="click" class="btn btn-light">Heal!</button>
+				</div>
+			</div>
+		</div>
+		<div id="locations" class="container hidden" style="margin-top: 10%; text-align: center;">
+			<button id="fight" type="click" class="btn btn-info" style="margin-right: 2%">Fight</button>
+			<button id="shop" type="click" class="btn btn-info">Shop</button>
+		</div>
+		<div id="choice" class="container hidden" style="margin-top: 10%; text-align: center;">
+			<button id="engage" type="click" class="btn btn-success" style="margin-right: 2%">Engage</button>
+			<button id="leave" type="click" class="btn btn-danger">Leave</button>
+		</div>
+		<div id="reset" class="container hidden" style="margin-top: 10%; text-align: center;">
+			<button id="restart" type="click" class="btn btn-light">Restart</button>
+		</div>
+	</div>
+	<div class="container hidden" id="shopScreen">
+		<h1><button id="close-shop" class="btn btn-danger mr-3">Close</button> Shop</h1>
+		<h1 class="mt-2">Money: <span id="shop-money">0</span></h1>
+		<br>
+		<div class="d-flex mt-3 text-center">
+			<div class="card mx-5">
+				<div class="card-body">
+					<h1 class="card-title">Health Potion</h1>
+					<img src="assets/images/potions/health.png" alt="health potion image" class="card-img potion">
+					<p class="card-text mt-3">Cost: <span id="health-price">20</span></p>
+					<button class="btn btn-success">Buy</button>
+				</div>
+			</div>
+			<div class="card mx-5">
+				<div class="card-body">
+					<h1 class="card-title">Magic Potion</h1>
+					<img src="assets/images/potions/mana.png" alt="magic potion image" class="card-img potion">
+					<p class="card-text mt-3">Cost: <span id="magic-price">20</span></p>
+					<button class="btn btn-success">Buy</button>
+				</div>
+			</div>
+			<div class="card mx-5">
+				<div class="card-body">
+					<h1 class="card-title">Strength Potion</h1>
+					<img src="assets/images/potions/strength.png" alt="strength potion image" class="card-img potion">
+					<p class="card-text mt-3">Cost: <span id="strength-price">20</span></p>
+					<button class="btn btn-success">Buy</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+
+</html>

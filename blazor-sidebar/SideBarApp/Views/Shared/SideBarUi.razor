@@ -1,0 +1,46 @@
+@using Microsoft.AspNetCore.Components
+
+@if (disable) 
+{
+    <button class="btn btn-light mb-4" @onclick="@(async () => await changeState())" disabled>Menu</button>
+} else {
+    <button class="btn btn-light mb-4" @onclick="@(async () => await changeState())">Menu</button>
+}
+<br>
+<div class="animate__animated @fadeOut">
+    <div class="card w-25 text-center">
+        <div class="card-body">
+            @foreach ((string, string) link in menu)
+            {
+                <a class="card-text menu-link" href="@link.Item1">@link.Item2</a>
+                <br>
+            }
+        </div>
+    </div>
+</div>
+
+@code {
+    public List<(string, string)> menu {get; set;} = new List<(string, string)>{
+        ("/", "Home")
+    };
+    public int timer {get; set;} = 1000;
+    public bool isOpen {get; set;} = false;
+    public string fadeOut {get; set;} = "invisible";
+    public bool disable {get; set;} = false;
+    public async Task changeState() {
+        if (isOpen == true) {
+            isOpen = false;
+            disable = true;
+            fadeOut = "animate__fadeOutLeft";
+            await Task.Delay(timer);
+            disable = false;
+            fadeOut = "invisible";
+        } else {
+            isOpen = true;
+            disable = true;
+            fadeOut = "animate__fadeInLeft";
+            await Task.Delay(timer);
+            disable = false;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Treat
+<div class="text-center">
+
+  <h1>Are you sure you want to delete <span class="red">@Model.name</span>?</h1>
+  <hr class="my-4">
+  <a href="/treat" class="btn btn-warning">Cancel</a>
+  <form action="/treat/delete/@Model.treat_id" method="post">
+    <button type="submit" class="btn btn-danger">Delete</button>
+  </form>
+</div>

@@ -1,0 +1,12 @@
+.red {
+  color: red;
+}
+
+body {
+  background-color: #ededed;
+}
+
+a.list-link {
+  color: black;
+  font-size: 2rem;
+}

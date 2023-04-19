@@ -1,0 +1,46 @@
+@{
+  Layout = "_Layout";
+}
+<div class="text-center">
+  <a href="/">Home</a>
+  @if (!User.Identity.IsAuthenticated)
+  {
+    <h3>Please @Html.ActionLink("log in", "LogIn", "Account") to manage your Flavors.</h3>
+  } else {
+    <h1>@Model.UserName's Flavors</h1>
+    <hr>
+    <a href="/flavor/create" class="btn btn-primary mb-3">Add a flavor</a>
+    @foreach (Flavor flavor in ViewBag.my_flavors)
+    {
+    <div class="card w-25 m-auto text-center">
+      <div class="card-body">
+        <h1 class="card-title">
+          <a href="/flavor/details/@flavor.flavor_id">@flavor.name</a>
+        </h1>
+        <a href="/flavor/delete/@flavor.flavor_id" class="btn btn-danger">X</a>
+        <a href="/flavor/update/@flavor.flavor_id" class="btn btn-info ml-2">Edit</a>
+      </div>
+    </div>
+    <br>
+    }
+    <br>
+  }
+  <h1>All Flavors</h1>
+  <hr>
+  <br>
+  @if (ViewBag.flavors.Count == 0)
+  {
+    <p>Sorry there aren't any flavors yet</p>
+  }
+  @foreach (Flavor flavor in ViewBag.flavors)
+  {
+    <div class="card w-25 m-auto">
+      <div class="card-body">
+        <h1 class="card-title">
+          <a href="/flavor/details/@flavor.flavor_id">@flavor.name</a>
+        </h1>
+      </div>
+    </div>
+    <br>
+  }
+</div>

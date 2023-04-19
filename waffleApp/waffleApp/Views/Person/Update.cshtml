@@ -1,0 +1,8 @@
+@using waffleApp.Views.Shared.Pages.Person
+@using waffle.Models
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+  Layout = "_Layout";
+}
+
+<component type="typeof(UpdatePerson)" render-mode="Server" param-dude="@Model"/>

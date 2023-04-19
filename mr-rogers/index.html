@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/scripts.js"></script>
+  <title>Mr.Roger's Neighborhood</title>
+</head>
+<body>
+  <div class="container">
+    <h1 class="py-4">Welcome to Mr. Roger's Neighborhood</h1>
+    <div class="Roger-img mb-3">
+      <img src="img/mr-rogers.jpg" alt="picture of Mr.Rogers" class="w-25 m-auto">
+    </div>
+    <form>
+      <div class="form-group">
+        <label for="user-name">What's your name?</label>
+        <input type="text" id="user-name" class="form-control w-50 m-auto mb-5">
+        <br>
+        <label for="user-number">Pick a number between 0 and 100</label>
+        <input type="number" id="user-number" class="form-control w-50 m-auto mb-5" value="0" min="0" max="100">
+        <div class="buttons w-25 m-auto pt-4">
+          <button class="btn btn-custom" id="btn-rand">Random</button>
+          <button class="btn btn-custom" id="btn-submit">Submit</button>
+          <button type="reset" class="btn btn-custom" id="btn-reset">Reset</button>
+        </div>
+        <div class="w-25 m-auto pr-3 pt-2">
+          <label for="reverse-box">Reverse</label>
+          <input type="checkbox" id="reverse-box" class="form-control">
+        </div>
+      </div>
+    </form>
+    <div class="results list-group"></div>
+  </div>
+</body>
+</html>

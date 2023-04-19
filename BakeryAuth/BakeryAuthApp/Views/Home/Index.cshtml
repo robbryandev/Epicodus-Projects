@@ -1,0 +1,60 @@
+@{
+  Layout = "_Layout";
+}
+
+<div class="text-center">
+  <h1>Pierre's Sweet and Savory Treats</h1>
+  <hr class="my-4">
+  @if (User.Identity.IsAuthenticated)
+  {
+    <form class="my-3" action="/account/logoff" method="post">
+      <button class="btn btn-danger" type="submit">Log Out</button>
+    </form>
+  }
+  else 
+  {
+    <h3 class="my-3">Please @Html.ActionLink("log in", "LogIn", "Account") to manage your treats and flavors.</h3>
+  }
+<a href="/treat">Treats</a>
+<hr class="w-50">
+<br>
+<div class="w-25 text-center m-auto">
+  @if (ViewBag.treats.Count == 0)
+  {
+    <p>Sorry there aren't any treats yet</p>
+  }
+
+  @foreach (Treat treat in ViewBag.treats)
+  {
+    <div class="card">
+      <div class="card-body">
+      <h1 class="card-title">
+        <a href="/treat/details/@treat.treat_id">@treat.name</a>
+      </h1>
+      </div>
+    </div>
+    <br>
+  }
+</div>
+<a href="/flavor">Flavors</a>
+<hr class="w-50">
+<br>
+<div class="w-25 text-center m-auto">
+  @if (ViewBag.flavors.Count == 0)
+  {
+    <p>Sorry there aren't any flavors yet</p>
+  }
+
+  @foreach (Flavor flavor in ViewBag.flavors)
+  {
+    <div class="card">
+      <div class="card-body">
+      <h1 class="card-title">
+        <a href="/flavor/details/@flavor.flavor_id">@flavor.name</a>
+      </h1>
+      </div>
+    </div>
+    <br>
+  }
+</div>
+</div>

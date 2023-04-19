@@ -1,0 +1,42 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Treat
+
+@if(!ViewData.ModelState.IsValid) 
+{
+  @Html.ValidationSummary("Please fix the following error(s) and then resubmit the form:") 
+}
+<div class="text-center w-25 m-auto">
+  @using (Html.BeginForm("/treat/update"))
+  {
+    @Html.HiddenFor(m => m.treat_id)
+    @Html.HiddenFor(m => m.user_id)
+    <label for="name">Name</label>
+    <input class="form-control" type="text" name="name" id="name" required>
+    <br>
+    <label for="description">Description</label>
+    <input class="form-control" type="text" name="description" id="description" required>
+    <br>
+    <button class="btn btn-primary" type="submit">Update Treat</button>
+    <a class="btn btn-danger" href="/treat">Cancel</a>
+  }
+
+<h3 class="my-4">Add a Flavor</h3>
+@if (ViewBag.flavors.Count > 0)
+{
+  <form action="/treat/update/@Model.treat_id/flavor" method="post">
+    <select class="form-control" name="flavor_id" id="flavor_id">
+      @foreach (Flavor flavor in ViewBag.flavors)
+      {
+        <option value="@flavor.flavor_id">@flavor.name</option>
+      }
+    </select>
+    <br>
+    <button class="btn btn-info" type="submit" class="btn btn-info">Add Flavor</button>
+  </form>
+} else {
+  <h3>Sorry there aren't any flavors you can add to @Model.name</h3>
+}
+</div>

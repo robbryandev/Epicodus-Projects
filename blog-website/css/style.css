@@ -1,0 +1,34 @@
+.container {
+
+  
+}
+
+.container h1{
+
+}
+
+.blog-posts {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  background-color: aliceblue;
+  
+}
+
+.row {
+  width: 33%;
+  float: left;
+  background-color: bisque;
+  border: solid black 1px;
+  margin-bottom: 5px;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+.about-me {
+  width: 50%;
+}
+
+

@@ -1,0 +1,38 @@
+@using Microsoft.AspNetCore.Components
+@using Factory.Models
+
+<br>
+<div class="w-@inputSize m-auto">
+  <div class="list-group">
+    @foreach (Engineer eng in engineerList)
+    {
+      <div class="list-group-item bg-light mt-1">
+        <a class="list-link" href="/engineer/@eng.engineer_id">
+          @eng.name
+        </a>
+        <br>
+        <a class="btn btn-danger mt-2" href="/engineer/delete/@eng.engineer_id">X</a>
+      </div>
+    }
+    @foreach (Machine mac in machineList)
+    {
+      <div class="list-group-item bg-light mt-1">
+        <a class="list-link" href="/machine/@mac.machine_id">
+          @mac.name
+        </a>
+        <br>
+        <a class="btn btn-danger mt-2" href="/machine/delete/@mac.machine_id">X</a>
+      </div>
+    }
+  </div>
+</div>
+<br>
+
+@code {
+  [Parameter]
+  public int inputSize { get; set; } = 25;
+  [Parameter]
+  public List<Engineer> engineerList { get; set; } = new List<Engineer> { };
+  [Parameter]
+  public List<Machine> machineList { get; set; } = new List<Machine> { };
+}

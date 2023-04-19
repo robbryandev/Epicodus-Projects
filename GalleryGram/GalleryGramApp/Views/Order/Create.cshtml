@@ -1,0 +1,90 @@
+@{
+  Layout = "_Layout";
+}
+
+
+@using GalleryGram.ViewModels
+<h1>Place a new...</h1>
+
+@model OrderViewModel
+@if(!ViewData.ModelState.IsValid) 
+{
+  @Html.ValidationSummary("Please fix the following error(s) and then resubmit the form:") 
+}
+
+<body class="reglog">
+<center>
+
+<form action="/order/create/@ViewBag.pictureId" method="post">
+<div class="container" >
+    <div class="form1" >
+      <div class="title"><h1>Order!</h1></div>
+      <div class="subtitle">Let's create your Order!</div>
+
+      <div class="input-container ic1">
+        <input name="line1" id="line1" class="input" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label for="line1" class="placeholder">Address</label>
+      </div>
+
+      <div class="input-container ic2">
+        <input name="line2" id="line2" class="input" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label for="line2" class="placeholder">Apt#</label>
+      </div>
+
+      <div class="input-container ic2">
+        <input name="postalOrZipCode" id="postalOrZipCode" class="input" type="text" placeholder=" " />
+        <div class="cut cut-short"></div>
+        <label for="postalOrZipCode " class="placeholder">ZipCode</>
+      </div>
+
+        <div class="input-container ic1">
+        <input name="countryCode" id="countryCode" class="input" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label for="countryCode" class="placeholder">Country</label>
+      </div>
+
+      <div class="input-container ic2">
+        <input name="townOrCity" id="townOrCity" class="input" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label for="townOrCity" class="placeholder">City</label>
+      </div>
+
+      <div class="input-container ic2">
+        <input name="stateOrCounty" id="stateOrCounty" class="input" type="text" placeholder=" " />
+        <div class="cut cut-short"></div>
+        <label for="stateOrCounty" class="placeholder">State</>
+      </div>
+
+      <button type="text" class="submit">submit</button>
+    </div>
+</div>
+</form>
+</center>
+</body>
+
+
+
+@* <h4>Place a new order</h4>
+<form action="/order/create/@ViewBag.pictureId" method="post">
+  <label for="line1">Line 1</label>
+  <input type="text" id="line1" name="line1" required>
+  <br><br>
+  <label for="line2">Line 2</label>
+  <input type="text" id="line2" name="line2">
+  <br><br>
+  <label for="postalOrZipCode">Postal zip code</label>
+  <input type="text" id="postalOrZipCode" name="postalOrZipCode" required>
+  <br><br>
+  <label for="countryCode">Country code</label>
+  <input type="text" id="countryCode" name="countryCode" required>
+  <br><br>
+  <label for="townOrCity">Town or City</label>
+  <input type="text" id="townOrCity" name="townOrCity" required>
+  <br><br>
+  <label for="stateOrCounty">State or County</label>
+  <input type="text" id="stateOrCounty" name="stateOrCounty" required>
+  <br><br>
+  <button type="submit">Confirm order</button>
+</form> *@

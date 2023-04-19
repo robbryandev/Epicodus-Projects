@@ -1,0 +1,9 @@
+h1,li {
+  color:aqua;
+  text-align:center;
+  font-style:bold;
+  font-weight: 100;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 12;
+  line-height: 10;
+}

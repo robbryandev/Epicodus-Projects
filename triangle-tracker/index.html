@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js"></script>
+    <title>Triangle Tracker</title>
+</head>
+<body class="bg-dark text-light">
+    <div class="container">
+      <h1 class="text-center mt-4">Triangle Tracker</h1>
+      <form class="mt-4">
+        <div class="form-group">
+          <label for="side-1">Side 1</label>
+          <input type="text" class="form-control" id="side-1">
+          <label for="side-2" class="mt-3">Side 2</label>
+          <input type="text" class="form-control" id="side-2">
+          <label for="side-3" class="mt-3">Side 3</label>
+          <input type="text" class="form-control" id="side-3">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="reset" class="btn btn-danger" id="reset-btn">Reset</button>
+      </form>
+      <h3 class="mt-4">Triangle type: <span id="result" class="invisible">test</span></h3>
+      <br>
+      <img alt="" class="invisible w-50 h-50" id="tri-pic">
+    </div>
+</body>
+</html>

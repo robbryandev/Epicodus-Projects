@@ -1,0 +1,47 @@
+/* Global */
+* {
+  text-align: center;
+}
+
+:root {
+  --primary: rgb(222, 223, 223);
+  --secondary: rgb(131, 182, 221);
+  --danger: rgb(169, 85, 72);
+  --success: rgb(174, 196, 212);
+}
+
+/* Elements */
+body {
+  background-color: #707483;
+  color: white;
+}
+
+li {
+  color: black;
+}
+
+li:hover {
+  background-color: var(--success);
+  color: white;
+  font-weight: bolder;
+  text-shadow: 2px black;
+}
+
+/* Classes */
+.btn-custom {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  margin-right: 1vw;
+  margin-bottom: 1vh;
+}
+
+.btn-custom:hover {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  color: white;
+}
+
+#btn-reset:hover {
+  background-color: var(--danger);
+  border-color: var(--danger);
+}

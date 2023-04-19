@@ -1,0 +1,16 @@
+@using Microsoft.AspNetCore.Components
+@using Factory.Models
+
+<div class="text-center">
+  <h1>Delete @machine.name</h1>
+  <h2>Are you sure you want to delete machine <span class="red">@machine.name</span>?</h2>
+  <form action="/machine/delete/@machine.machine_id" method="post">
+    <a href="/machine" class="btn btn-info">Cancel</a>
+    <button class="btn btn-danger">Yes</button>
+  </form>
+</div>
+
+@code {
+  [Parameter]
+  public Machine machine { get; set; }
+}

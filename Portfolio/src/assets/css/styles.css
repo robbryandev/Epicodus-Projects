@@ -1,0 +1,66 @@
+/* global */
+
+body {
+  background-color: #f1f1f1;
+}
+
+/* custom utilities */
+
+.float-center {
+  float: center;
+}
+
+.fill {
+  width: 150px;
+  height: 150px;
+  object-fit: fill;
+}
+
+/* profile section */
+
+.profile-box {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  border: lightslategray solid 2px;
+  object-fit: fill;
+}
+
+/* about me section */
+
+.about {
+  padding-top: 1%;
+  width: 65%;
+  margin: auto;
+}
+
+/* background section */
+
+.back {
+  padding-top: 1%;
+  width: 65%;
+  margin: auto;
+}
+
+.back ul {
+  margin-left: 7%;
+}
+
+/* hobby section */
+
+.hobby {
+  padding-top: 1%;
+  width: 45%;
+  margin: auto;
+}
+
+/* project section */
+
+.port-item {
+  width: 300px;
+  margin-bottom: 2%;
+}
+
+.port-text {
+  font-weight: bold;
+}

@@ -1,0 +1,79 @@
+@{
+  Layout = "_Layout";
+}
+
+<body class="reglog">
+
+  @using GalleryGram.Models
+
+  <h1>Gallery</h1>
+
+  @if (User.Identity.IsAuthenticated)
+  {
+<iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+  <div class="row row-cols-4">
+
+    @foreach (Picture picture in Model)
+    {<center style="padding: 10px;">
+
+      <div  class="card col mx-4">
+        <div  class="card-body">
+          <div class="card_title title-white">
+            <div  class="container">
+              <div>
+                <div>
+                  <img src="@picture.fileName" class="card-img">
+                  <br>
+                  <div>
+                      @* div for like button *@
+                      <div id="pic-@picture.picture_id" class="svg-wrapper">
+                        <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+
+                          <rect id="shape" height="40" width="150" />
+                          <div id="text">
+
+                            @* <a href=""><span class="spot" style="margin-bottom: 20%;"></span>Like</a> *@
+                            <form action="/gallery/like/@picture.picture_id" method="post" target="dummyframe">
+                              <button type="submit" style="margin-top: 5px;" class="btn spot like-btn" onclick="setLike(@picture.picture_id)">Like</button>
+                            </form>
+
+                          </div>
+                        </svg>
+                      </div>
+                      @* div for add cart button *@
+                      <div class="svg-wrapper">
+                        <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+                          <rect id="shape" height="40" width="150" />
+                          <div id="text">
+                            <a href="/order/create/@picture.picture_id" class="spot">Buy Print</a>
+                          </div>
+                        </svg>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div></center>
+
+    }
+  </div>
+  }
+  else
+  {
+    <p>You must be logged in to view the Gallery</p>
+  }
+
+<script>
+  function setLike(id) {
+    const thisElement = document.getElementById(`pic-${id}`)
+    thisElement.classList.add("invisible")
+    setTimeout(() => {
+      thisElement.parentElement.removeChild(thisElement);
+    }, 1500)
+  }
+</script>
+
+
+</body>

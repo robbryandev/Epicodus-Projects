@@ -1,0 +1,133 @@
+@{
+  Layout = "_Layout";
+}
+@using DoctorOffice.Models
+
+<div class="text-center">
+  <h1>@Model.name</h1>
+  <a href="/">
+    <h3>View all doctors</h3>
+  </a>
+  <form action="/doctor/delete/@Model.doctor_id" method="post">
+    <button type="submit" class="btn btn-danger">Fire @Model.name</button>
+  </form>
+  <br>
+</div>
+<div class="text-center">
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-4">
+      <form action="/patient/@Model.doctor_id/add" method="post">
+        <h5>Add A Patient</h5>
+        <label for="drop_name">Name</label><br>
+        <select name="drop_name" id="drop_name" required>
+          <option value="" disabled selected>Patient List</option>
+          @foreach (Patient pat in ViewBag.Patients)
+          {
+            <option value="@pat.patient_id">@pat.name</option>
+          }
+        </select>
+        <br><br>
+        <button type="submit" class="btn btn-info">Add</button>
+      </form>
+    </div>
+    <div class="col-4">
+      <form action="/specialty/@Model.doctor_id/add" method="post">
+        <h5>Add A Specialty</h5>
+        <label for="drop_name">Name</label><br>
+        <select name="drop_name" id="drop_name" required>
+          <option value="" disabled selected>Specialty List</option>
+          @foreach (Specialty spec in ViewBag.Specialty)
+          {
+            <option value="@spec.specialty_id">@spec.name</option>
+          }
+        </select>
+        <br><br>
+        <button type="submit" class="btn btn-info">Add</button>
+      </form>
+    </div>
+    <div class="col-2"></div>
+  </div>
+  <hr>
+  <h2>Patients:</h2>
+    @foreach (Patient pat in ViewBag.DocPatients)
+    {
+    <div class="mb-2">
+        <div class="card w-25 m-auto bg-light">
+          <div class="card-body">
+            <h1 class="card-title">
+              @pat.name
+            </h1>
+            <p class="card-text">Birthday: @pat.birthday</p>
+              @if (pat.name.Contains("ho"))
+  {
+    <img class="card-img" src="https://media.giphy.com/media/l2Je9uquleG64bJvy/giphy.gif">
+  }
+              @if (pat.name.Contains("a"))
+  {
+    <img class="card-img" src="https://media.giphy.com/media/xT1R9J0xPzI7RKe9q0/giphy.gif">
+  }
+              @if (pat.name.Contains("jo"))
+  {
+    <img class="card-img" src="https://media.giphy.com/media/Q88oxqTvKBUPK/giphy.gif">
+  }
+            <form action="/patient/delete/@pat.patient_id/@Model.doctor_id" method="post">
+              <br>
+              <button type="submit" class="btn btn-danger">X</button>
+            </form>
+          </div>
+        </div>
+    </div>
+    }
+  <hr>
+  <h2>Special Specialties:</h2>
+  <ul class="list-group w-25 m-auto">
+    @foreach (Specialty spec in ViewBag.DocSpecialty)
+    {
+      <li class="list-group-item mb-3 bg-light">
+        @spec.name
+        <br>
+        <form action="/specialty/delete/@spec.specialty_id/@Model.doctor_id" method="post">
+          <button type="submit" class="btn btn-danger">X</button>
+        </form>
+                    @if (spec.name.Contains("bur"))
+  {
+    <img class="card-img" src="https://media.giphy.com/media/xT0BKKNqQB7W2sVQyY/giphy.gif">
+  }
+                    @if (spec.name.Contains("br"))
+  {
+    <img class="card-img" src="https://media.giphy.com/media/Ka1o3q9oaruaZY8zOx/giphy.gif">
+  }
+                    @if (spec.name.Contains("su"))
+  {
+    <img class="card-img" src="https://media.giphy.com/media/QssC4u6deM4iIMF5NS/giphy.gif">
+  }
+      </li>
+    }
+  </ul>
+  @if (Model.name.Contains("bean"))
+  {
+    <img src="https://media.giphy.com/media/9Ai5dIk8xvBm0/giphy.gif">
+  }
+  @if (Model.name.Contains("dr"))
+  {
+    <img src="https://media.giphy.com/media/3o7TKMBLdNJtXxonAY/giphy.gif">
+  }
+  @if (Model.name.Contains("Lucas"))
+  {
+    <img src="https://media.giphy.com/media/uvfEYoOq7HPAA/giphy.gif">
+  }
+  @if (Model.name.Contains("robert"))
+  {
+    <img src="https://media.giphy.com/media/kJbFZ0Zj7mTza/giphy.gif">
+  }
+  @if (Model.name.Contains("bu"))
+  {
+    <img src="https://media.giphy.com/media/vHqYqMzqQYl7wdetsS/giphy.gif">
+  }
+  @if (Model.name.Contains("who"))
+  {
+    <img src="https://media.giphy.com/media/13rmLONp33oWOI/giphy.gif">
+  }
+
+</div>

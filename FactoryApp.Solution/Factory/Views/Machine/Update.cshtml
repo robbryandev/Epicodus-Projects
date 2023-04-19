@@ -1,0 +1,8 @@
+@using Factory.Views.Shared.MachinePages
+@using Factory.Models
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+  Layout = "_Layout";
+}
+
+<component type="typeof(UpdatePage)" render-mode="ServerPrerendered" param-machine=@Model />

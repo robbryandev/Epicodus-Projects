@@ -1,0 +1,16 @@
+.board {
+    margin: auto;
+    width: 80vw;
+    height: 80vh;
+}
+
+.form {
+    width: fit-content;
+    height: fit-content;
+    display: relative;
+}
+
+.parent {
+    position: relative;
+    min-height: 100%;
+}

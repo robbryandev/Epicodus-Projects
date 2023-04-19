@@ -1,0 +1,31 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Flavor
+<div class="text-center">
+  <a href="/">Home</a>
+  <br>
+  <a href="/flavor">All Flavors</a>
+  <h1>@Model.name</h1>
+  <hr class="my-4">
+  @if (ViewBag.treats.Count > 0)
+  {
+    <h3>This flavor appears in these treats</h3>
+    @foreach (Treat treat in ViewBag.treats)
+    {
+      <div class="card w-25 m-auto">
+        <div class="card-body">
+          <a class="card-title" href="/treat/details/@treat.treat_id">@treat.name</a>
+          <form class="my-3" action="/flavor/delete/join/@Model.flavor_id/@treat.treat_id" method="post">
+            <button type="submit" class="btn btn-danger">X</button>
+          </form>
+        </div>
+      </div>
+      <br>
+    }
+  } else {
+    <h3>This flavor isn't on any treats yet</h3>
+  }
+
+</div>

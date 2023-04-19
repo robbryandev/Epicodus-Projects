@@ -1,0 +1,32 @@
+/*style sheet for favorite-places.html and my-first-webpage.html*/
+h1{
+  color: teal;
+  text-align: center;
+  font-style:italic;
+  font-family: 'Times New Roman', Times, serif;
+}
+ol{
+  color: green;
+  line-height: 20px;
+  font-size: 20px;
+  
+}
+img{
+  width: auto;
+  height: 300px;
+  z-index: -1; /*allows for elements to go over image*/
+}
+p{
+  height: 20px;
+  color: aqua;
+}
+ul{
+  color: green;
+  line-height: 20px;
+  font-size: 20px;
+}
+h2{
+  background-color: red;
+  background-image: url("https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/12/Gradient_builder_2.jpg?auto=format&q=60&w=1815&h=1200&fit=crop&crop=faces");
+  opacity: .5;
+}

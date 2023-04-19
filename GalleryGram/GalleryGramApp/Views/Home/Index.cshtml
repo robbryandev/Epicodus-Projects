@@ -1,0 +1,34 @@
+@{
+  Layout = "_Layout";
+}
+
+<body class="homep">
+
+
+
+
+
+  <div class="title">
+    <h1>GalleryGram</h1>
+  </div>
+
+
+</body>
+<br>
+<div class="svg-wrapper">
+  <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+    <rect id="shape" height="40" width="150" />
+    <div id="text">
+      @* <a href=""><span class="spot"></span>Button 1</a> *@
+      <p style="margin-top: 5px;" class="spot">@Html.ActionLink("Account/Registry", "Index", "Account")
+
+      </p>
+    </div>
+  </svg>
+</div>
+
+
+@*
+  <p class="spot">@Html.ActionLink("Create or manage an account", "Index", "Account")
+
+  </p> *@

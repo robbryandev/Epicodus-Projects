@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>GalleryGram</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link rel="stylesheet" href="~/css/styles.css">
+</head>
+
+<body>
+  <div class="container">
+    @RenderBody()
+  </div>
+
+    <input type="checkbox" id="active";>
+    <label for="active" class="menu-btn"style="position: fixed"><i class="fas fa-bars"></i></label>
+    <div class="wrapper" ;>
+      <ul>
+<li><a class="drop-link" href="/account">Home</a></li>
+ @if (User.Identity.IsAuthenticated)
+ {
+  <li><a class="drop-link" href="/gallery">Gallery</a></li>
+  <li><form class="m-0 p-0" action="/account/logoff" method="post"><button class="btn drop-link" type="submit">LogOut</button></form></li>
+ }
+
+</ul>
+</div>
+<div class="content">
+      <div class="title">
+</div>
+</body>
+
+</html>
+

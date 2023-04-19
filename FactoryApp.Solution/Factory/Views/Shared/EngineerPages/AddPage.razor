@@ -1,0 +1,15 @@
+@using Microsoft.AspNetCore.Components
+@using Factory.Views.Shared
+@using Factory.Models
+
+<div class="text-center">
+  <a class="btn btn-light" href="/engineer">Back</a>
+  <br>
+  <AutoForm title="Add Engineer" actionPath="/engineer/add" inputs="@formInputs" />
+</div>
+
+@code {
+  List<(string, string[])> formInputs = new List<(string, string[])>{
+("text", new string[]{"name"})
+};
+}

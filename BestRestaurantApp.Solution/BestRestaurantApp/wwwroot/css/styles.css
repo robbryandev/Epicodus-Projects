@@ -1,0 +1,23 @@
+.jumbotron {
+  text-align: center;
+}
+
+#jumbotron {
+  font-size: 300%;
+}
+
+.stick {
+  position: fixed;
+  width: 33vw;
+  right: 1vw;
+}
+
+.button {
+  color: white;
+  margin-top: 3%;
+  width: 100%;
+}
+
+#delete {
+  color: red;
+}

@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0%;
+  padding: 0%;
+}
+
+.no-select {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none; 
+}
+
+.artist-card {
+  perspective: 1000px; 
+}
+
+.artist-card-holder {
+  position: relative;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.artist-card:hover .artist-card-holder {
+  transform: rotateY(180deg);
+}
+
+.artist-card-front, .artist-card-back {
+  position: absolute;
+  -webkit-backface-visibility: hidden; /* Safari */
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.artist-card-back {
+  transform: rotateY(180deg);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.show-link {
+  letter-spacing: 0.1rem;
+}

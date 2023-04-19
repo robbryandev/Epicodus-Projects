@@ -1,0 +1,85 @@
+@{
+  Layout = "_Layout";
+}
+
+@using GalleryGram.ViewModels
+
+@model RegisterViewModel
+<body class="reglog" >
+  
+
+@* <h1>Register</h1> *@
+
+@if(!ViewData.ModelState.IsValid) 
+{
+  @Html.ValidationSummary("Please fix the following error(s) and then resubmit the form:") 
+}
+@*  *@
+<center>
+@* @using (Html.BeginForm("Register", "Account", FormMethod.Post)) *@
+<form action="/account/register" method="post">
+<div class="container" >
+    <div class="form" >
+      <div class="title"><h1>Hello!</h1></div>
+      <div class="subtitle">Let's create your account!</div>
+      <div class="input-container ic1">
+        <input name="Email" id="Email" class="input" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label for="Email" class="placeholder">Email</label>
+      </div>
+      <div class="input-container ic2">
+        <input name="Password" id="Password" class="input" type="password" placeholder=" " />
+        <div class="cut"></div>
+        <label for="Password" class="placeholder">Password </label>
+      </div>
+      <div class="input-container ic2">
+        <input name="ConfirmPassword" id="ConfirmPassword" class="input" type="password" placeholder=" " />
+        <div class="cut cut-short"></div>
+        <label for="ConfirmPassword " class="placeholder">ConfirmPassword </>
+      </div>
+      <button type="text" class="submit">submit</button>
+    </div>
+</div>
+</form>
+</center>
+
+
+  @* @Html.LabelFor(user => user.Email) <br>
+  @Html.TextBoxFor(user=> user.Email)<br>
+
+  @Html.LabelFor(user=> user.Password)<br>
+  @Html.EditorFor(user=> user.Password)<br>
+
+  @Html.LabelFor(user=> user.ConfirmPassword)<br>
+  @Html.EditorFor(user=> user.ConfirmPassword)<br>
+<br> *@
+  
+@*  *@
+  @* <div class="svg-wrapper">
+  <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+    <rect id="shape" height="40" width="150" />
+    <div id="text"> <br>
+   <p style="margin-top: px;" class="spot"><input class="btn" type="submit" value="Register" />
+
+      </p>
+    </div>
+  </svg>
+</div>
+}
+
+
+<br>
+<div class="svg-wrapper">
+  <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+    <rect id="shape" height="40" width="150" />
+    <div id="text"> <br>
+   <p style="margin-top: 5px;" class="spot">@Html.ActionLink("Back to accounts", "Index")
+
+      </p>
+    </div>
+  </svg>
+</div> *@
+
+</body>
+
+

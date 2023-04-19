@@ -1,0 +1,68 @@
+@{
+  Layout = "_Layout";
+}
+    
+<body id="uploadpage">
+  <h1 style="text-align: center;">Uploads</h1>
+
+  <form enctype="multipart/form-data" action="/gallery/upload" method="post">
+@model IFormFile
+
+      <br>
+      <br>
+    @* <div class="container" style="padding: 250px;">
+      <div class="Neon Neon-theme-dragdropbox" id="drop">
+      <input style="z-index: 999; opacity:1; width: 320px; height: 200px; position: absolute; right: 0px; left: 0px;
+      margin-right: auto; margin-left: auto; margin-top: 300px;" name="formFile" id="FormFile" type="file" required>
+      <div class="Neon-input-dragDrop"><div class="Neon-input-inner"><div class="Neon-input-icon"><i class="fa
+      fa-file-image-o"></i></div><div class="Neon-input-text"><h3>Drag&amp;Drop files here</h3> <span
+      style="display:inline-block; margin: 15px 0">or</span></div>
+      </div>
+    *@
+
+    <div class="svg-wrapper">
+      <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+        <rect id="shape" height="40" width="150" />
+        <div id="text">
+          @* <a href=""><span class="spot"></span>Button 1</a> *@
+          <p class="spot"><input class="btn" asp-page-handler="Upload" type="submit"
+              value="Upload Image" />
+
+          </p>
+        </div>
+      </svg>
+    </div>
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    </div>
+    <div class="container col-md-6">
+      <div class="mb-5">
+        <label asp-for="FileUpload.FormFile" class="form-label" id="formFile" required></label>
+        <input asp-for="FileUpload.FormFile" class="form-control" name="formFile" type="file" id="formFile" required aria-required="true" onchange="preview()">
+        <span asp-validation-for="FileUpload.FormFile"></span>
+      </div>
+      <img id="frame" src="" class="img-fluid" />
+    </div>
+
+    <script>
+      function preview() {
+        frame.src = URL.createObjectURL(event.target.files[0]);
+      }
+      function clearImage() {
+        document.getElementById('formFile').value = null;
+        frame.src = "";
+      }
+    </script>
+</form>
+</body>
+
+</html>

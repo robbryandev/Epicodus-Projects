@@ -1,0 +1,37 @@
+@using Microsoft.AspNetCore.Components
+@using Factory.Models
+
+<div class="text-center">
+  <h1>Home</h1>
+  <br>
+
+  <h2>Engineers</h2>
+  <a class="btn btn-light" href="/engineer">Engineer hub</a>
+  @if (engineers.Count() > 0)
+  {
+    <br>
+    <NameList engineerList="@engineers" />
+  }
+  else
+  {
+    <p>There are no engineers yet</p>
+  }
+  <h2>Machines</h2>
+  <a class="btn btn-light" href="/machine">Machine hub</a>
+  @if (machines.Count() > 0)
+  {
+    <br>
+    <NameList machineList="@machines" />
+  }
+  else
+  {
+    <p>There are no machines yet</p>
+  }
+</div>
+
+@code {
+  [Parameter]
+  public List<Engineer> engineers { get; set; }
+  [Parameter]
+  public List<Machine> machines { get; set; }
+}

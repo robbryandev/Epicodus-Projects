@@ -1,0 +1,33 @@
+@using Microsoft.AspNetCore.Components
+@using Factory.Views.Shared
+@using Factory.Models
+
+<div class="text-center">
+  <a class="btn btn-light" href="/machine/@machine.machine_id">Back</a>
+  <br>
+  <AutoForm title="Update Machine" actionPath=@(new PageInfo(machine).ActionPath) inputs=@(new
+    UpdateList(machine).formInputs) />
+</div>
+
+@code {
+  [Parameter]
+  public Machine machine { get; set; }
+  public class PageInfo
+  {
+    public string ActionPath { get; set; }
+    public PageInfo(Machine mac)
+    {
+      ActionPath = $"/machine/update/{mac.machine_id}";
+    }
+  }
+  public class UpdateList
+  {
+    public List<(string, string[])> formInputs { get; set; }
+    public UpdateList(Machine mac)
+    {
+      formInputs = new List<(string, string[])>{
+("text", new string[]{"name", mac.name})
+};
+    }
+  }
+}

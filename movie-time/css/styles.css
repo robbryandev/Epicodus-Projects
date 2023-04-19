@@ -1,0 +1,9 @@
+html {
+    background-image: url(https://coolmaterial.com/wp-content/uploads/2018/08/Berlins-Delphi-LUX-Cinema-Is-a-Work-of-Art-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container-fluid {
+    background: rgb(221, 4, 4);
+}

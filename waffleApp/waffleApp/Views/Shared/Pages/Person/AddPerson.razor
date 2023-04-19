@@ -1,0 +1,12 @@
+@using Microsoft.AspNetCore.Components
+@using waffle.Models
+
+<a href="/person">Cancel</a>
+<AutoForm actionPath="/person/add" title="New Person" inputs=@personInputs />
+
+@code {
+    List<(string, string[])> personInputs = new List<(string, string[])>{
+      ("text", new string[]{"name"}),
+      ("date", new string[]{"birthday"})
+  };
+}

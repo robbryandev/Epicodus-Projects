@@ -1,0 +1,16 @@
+@using Microsoft.AspNetCore.Components
+@using waffle.Models
+
+<a href="/">Home</a>
+<h1>Pizza</h1>
+<a href="/pizza/add">Add a new pizza</a>
+<br>
+  @foreach (Pizza pz in pizzas)
+  {
+    <h3>@pz.type</h3>
+  }
+
+@code {
+  [Parameter]
+  public List<Pizza> pizzas {get; set;} = new List<Pizza>{};
+}

@@ -1,0 +1,16 @@
+@using Microsoft.AspNetCore.Components
+@using Factory.Models
+
+<div class="text-center">
+  <a class="btn btn-light" href="/">Back</a>
+  <h1>Machines</h1>
+  <br>
+  <a class="btn btn-primary" href="/machine/add">Add a new machine</a>
+  <br>
+  <NameList machineList="@machines" />
+</div>
+
+@code {
+  [Parameter]
+  public List<Machine> machines { get; set; } = new List<Machine> { };
+}

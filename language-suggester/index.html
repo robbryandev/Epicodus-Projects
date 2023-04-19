@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/scripts.js"></script>
+  <title>Language Suggester</title>
+</head>
+<body>
+  <!-- Main Container -->
+  <div class="container">
+    <h1 class="text-center mb-2 pt-4 title-text">Language Suggester</h1>
+    <br>
+    <!-- Input Form -->
+    <form class="mt-2">
+      <div class="form-group w-75 m-auto text-center">
+        <label for="u-name" class="mt-2">What's your name?</label>
+        <input type="text" id="u-name" class="form-control">
+        <br>
+        <!-- Base Questions -->
+        <label for="lang-type" class="mt-2">What type of language do you prefer?</label>
+        <br>
+        <select name="lang-type" id="lang-type" class="form-control">
+          <option value="0">Interpreted</option>
+          <option value="1">Compiled</option>
+        </select>
+        <br>
+        <label for="tabbed" class="mt-2">Do you want tab based blocks?</label>
+        <br>
+        <select name="tabbed" id="tabbed" class="form-control">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+        <!-- Question Holder for hidden questions to be placed into -->
+        <div class="other-spot"></div>
+        <!-- Buttons -->
+        <div id="btn-spot">
+          <button type="submit" class="btn btn-primary mt-4 mr-2">Submit</button>
+          <button type="reset" class="btn btn-danger mt-4">Reset</button>
+        </div>
+      </div>
+    </form>
+    <!-- Result -->
+    <div class="result invisible w-25 m-auto mt-3 pt-3">
+        <h1 id="result-text">Result: <span id="placeholder"></span></h1>
+        <p id="result-prompt"></p>
+        <br>
+        <img id="lang-img" src="" alt="programming language logo img-fluid">
+    </div>
+    <!-- Hidden Questions show up when the tabbed question is set to no -->
+    <div class="hide-spot invisible">
+      <!-- Interpreted Language questions -->
+      <div id="inter-box">
+        <br>
+        <label for="local-script" class="inter other mt-2">Do you want to do local scripting?</label>
+        <br>
+        <select name="local-script" id="local-script" class="form-control">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+        <br>
+        <label for="work-data" class="inter other mt-2">Do you need to work with a lot of data?</label>
+        <br>
+        <select name="work-data" id="work-data" class="form-control">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+        <br>
+        <label for="back-end" class="inter other mt-2">Do you need a backend?</label>
+        <br>
+        <select name="back-end" id="back-end" class="form-control">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+      <!-- Compiled language questions -->
+      <div id="comp-box">
+        <br>
+        <label for="first-lang" class="inter other mt-2">Is this your first language?</label>
+        <br>
+        <select name="first-lang" id="first-lang" class="form-control">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+        <br>
+        <label for="meta-q" class="inter other mt-2">Do you want metta programming features?</label>
+        <br>
+        <select name="meta-q" id="meta-q" class="form-control">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+        <br>
+        <label for="ios" class="inter other mt-2">Do you want to work with IOS?</label>
+        <br>
+        <select name="ios" id="ios" class="form-control">
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

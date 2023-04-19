@@ -1,0 +1,5 @@
+**/bin/
+**/obj/
+**/appsettings.json
+**/wwwroot/pictures/*.png
+EnvironmentVariables.cs

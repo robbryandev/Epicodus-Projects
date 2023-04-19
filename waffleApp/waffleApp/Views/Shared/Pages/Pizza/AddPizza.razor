@@ -1,0 +1,17 @@
+@using Microsoft.AspNetCore.Components
+
+<a href="/pizza">Cancel</a>
+<AutoForm actionPath="/pizza/add" title="New Pizza" dropDowns=@pizzaInputs />
+
+@code {
+  static string pizzaName = "type";
+
+  static string[] pizzaTypes = new string[]{
+    "pepporoni",
+    "cheese",
+    "bbq"
+  };
+  Dictionary<string, string[]> pizzaInputs {get; set;} = new Dictionary<string, string[]>{
+    {pizzaName, pizzaTypes}
+  };
+}

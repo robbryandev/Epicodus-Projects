@@ -1,0 +1,23 @@
+@{
+  Layout = "_Layout";
+}
+
+@model AddTreatViewModel
+
+@if(!ViewData.ModelState.IsValid) 
+{
+  @Html.ValidationSummary("Please fix the following error(s) and then resubmit the form:") 
+}
+<div class="text-center w-25 m-auto">
+  @using (Html.BeginForm("/treat/create"))
+  {
+    <label for="name">Name</label>
+    <input class="form-control" type="text" name="name" id="name" required>
+    <br>
+    <label for="description">Description</label>
+    <input class="form-control" type="text" name="description" id="description" required>
+    <br>
+    <button class="btn btn-primary" type="submit">Add Treat</button>
+    <a class="btn btn-danger" href="/treat">Cancel</a>
+  }
+</div>

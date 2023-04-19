@@ -1,0 +1,16 @@
+@using Microsoft.AspNetCore.Components
+@using waffle.Models
+
+<a href="/">Home</a>
+<h1>People</h1>
+<a href="/person/add">Add a new person</a>
+<br>
+  @foreach (People person in peoples)
+  {
+    <PersonCard someDude=@person/>
+  }
+
+@code {
+  [Parameter]
+  public List<People> peoples {get; set;} = new List<People>{};
+}

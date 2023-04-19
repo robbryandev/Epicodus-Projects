@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <title>Vendors</title>
+</head>
+<body>
+    @using BakeryMVCApp.Models
+    <div class="container">
+        <div class="mb-4 text-center w-25 m-auto">
+            <a href="/" class="btn btn-warning d-block mb-2">Back</a>
+            <a href="/vendor/new" class="btn btn-primary d-block">New Vendor</a>
+        </div>
+        @foreach (Vendor vend in Vendor.GetAll())
+        {
+            <div class="card w-50 mb-2 m-auto">
+                <div class="card-body accordion text-center" id="card-@vend.id">
+                    <h3 class="card-title">@vend.Name</h3>
+                    <a class="btn btn-secondary" data-bs-toggle="collapse" data-bs-target="#vend-@vend.id" href="#vend-@vend.id" role="button" aria-expanded="false" aria-controls="vend-@vend.id">Details</a>
+                    <div class="collapse" id="vend-@vend.id" data-bs-parent="#card-@vend.id">
+                        <h5 class="card-title">Description</h5>
+                        <p class="card-text">@vend.Description</p>
+                        @if (vend.Orders.Count > 0)
+                        {
+                            <h5 class="card-title">Orders</h5>
+                            <ul>
+                                @foreach (Order ord in vend.Orders)
+                                {
+                                    <li>
+                                        Title: @ord.Title
+                                        <br>
+                                        Description: @ord.Description
+                                        <br>
+                                        Price: @ord.Price
+                                        <br>
+                                        Date: @ord.Date[1] / @ord.Date[2] / @ord.Date[0]
+                                        <br>
+                                        <br>
+                                    </li>
+                                }   
+                            </ul>
+                        }
+                        <a class="btn btn-success" href="/orders/@vend.id/new">New Order</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+</body>
+</html>

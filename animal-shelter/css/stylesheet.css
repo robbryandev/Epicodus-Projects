@@ -1,0 +1,27 @@
+.animals ul {
+  list-style: none;
+}
+.animals a {
+  display: block;
+  text-align: center;
+  font-size: larger;
+}
+.animals img {
+  width: 300px;
+  height: auto;
+}
+.animals p {
+  text-align: center;
+}
+.animals {
+  width: 300px;
+  margin: auto;
+}
+.dogs {
+  width: 330px;
+  margin: auto;
+  border: 10px solid black;
+  padding: 5px;
+  background-color: pink;
+  box-sizing: border-box;
+}

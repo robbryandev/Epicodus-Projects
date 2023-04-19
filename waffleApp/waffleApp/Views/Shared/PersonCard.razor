@@ -1,0 +1,19 @@
+@using Microsoft.AspNetCore.Components
+@using waffle.Models
+
+<div class="card w-25">
+  <div class="card-body">
+    <h1 class="card-title">
+      @someDude.name
+    </h1>
+    <p class="card-text">
+      Birthday: @someDude.birthday
+    </p>
+    <a href="/person/update/@someDude.person_id">Edit</a>
+  </div>
+</div>
+
+@code {
+  [Parameter]
+  public People someDude {get; set;}
+}

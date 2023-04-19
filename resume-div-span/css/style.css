@@ -1,0 +1,18 @@
+div.work{
+  text-align: center;
+}
+
+.red {
+  color: red;
+  font-style: italic;
+}
+
+.green {
+  color: green;
+  font-style: bold;
+}
+
+.blue {
+  color: blue;
+  font-style: bold;
+}

@@ -1,0 +1,33 @@
+@using Microsoft.AspNetCore.Components
+@using Factory.Views.Shared
+@using Factory.Models
+
+<div class="text-center">
+  <a class="btn btn-light" href="/engineer/@engineer.engineer_id">Back</a>
+  <br>
+  <AutoForm title="Update Engineer" actionPath=@(new PageInfo(engineer).ActionPath) inputs=@(new
+    UpdateList(engineer).formInputs) />
+</div>
+
+@code {
+  [Parameter]
+  public Engineer engineer { get; set; }
+  public class PageInfo
+  {
+    public string ActionPath { get; set; }
+    public PageInfo(Engineer eng)
+    {
+      ActionPath = $"/engineer/update/{eng.engineer_id}";
+    }
+  }
+  public class UpdateList
+  {
+    public List<(string, string[])> formInputs { get; set; }
+    public UpdateList(Engineer eng)
+    {
+      formInputs = new List<(string, string[])>{
+("text", new string[]{"name", eng.name})
+};
+    }
+  }
+}

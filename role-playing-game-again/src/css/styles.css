@@ -1,0 +1,39 @@
+body {
+  background-color: black;
+}
+
+h1 {
+  color: white;
+}
+
+.card-text, .card-title {
+  color: black;
+}
+
+.potion {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+h2#badieName {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+h1#dead {
+  color: red;
+  text-align: center;
+}
+
+span#atkDamage {
+  color: red;
+}
+
+span#badieAtkDamage {
+  color: red;
+}
+

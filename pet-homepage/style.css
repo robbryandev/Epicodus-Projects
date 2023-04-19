@@ -1,0 +1,24 @@
+.dog_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.dog_box img {
+  width: 300px;
+  padding: 10px;
+  height: auto;
+}
+.hate_list{
+  color: red;
+  font-size: 200%;
+  padding: 30px;
+}
+.love_list{
+  color: green;
+  font-size: 200%;
+  padding: 30px;
+}
+.header{
+  text-align: center;
+  font-size: 200%;
+}

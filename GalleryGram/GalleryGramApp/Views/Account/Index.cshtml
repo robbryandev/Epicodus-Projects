@@ -1,0 +1,156 @@
+@{
+  Layout = "_Layout";
+}
+
+<body class="reglog">
+
+  <h1>Welcome to your GalleryGram</h1>
+<iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+
+
+  @using GalleryGram.Models
+
+  @if (User.Identity.IsAuthenticated)
+  {
+    <div class="waviy">
+      <span style="--i:1">h</span>
+      <span style="--i:2">e</span>
+      <span style="--i:3">l</span>
+      <span style="--i:4">l</span>
+      <span style="--i:5">o</span>
+      <span style="--i:6">!</span>
+    </div>
+    <h2>@User.Identity.Name!</h2>
+
+
+
+    <div class="svg-wrapper">
+      <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+        <rect id="shape" height="40" width="150" />
+        <div id="text">
+          @* <a href=""><span class="spot"></span>Button 1</a> *@
+          <p style="margin-top: 5px;" class="spot"><a href="/gallery/upload">upload Image</a>
+
+          </p>
+        </div>
+      </svg>
+    </div>
+
+  <div style="margin-left: 120px;" class="row row-cols-4">
+
+    @foreach (Picture picture in ViewBag.pictures)
+    {
+      <div class="card col mx-3" id="pic-@picture.picture_id">
+        <div class="card-body">
+          <div class="card_title title-white">
+            <div class="container">
+              <div>
+                <div>
+                  <img src="@picture.fileName" class="card-img">
+                  <br>
+                  <div>
+                      @* div for like button *@
+                      <div class="svg-wrapper">
+                        <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+
+                          <rect id="shape" height="40" width="150" />
+                          <div id="text">
+
+                            @* <a href=""><span class="spot" style="margin-bottom: 20%;"></span>Like</a> *@
+                              <form action="/gallery/delete/@picture.picture_id" method="post" target="dummyframe">
+                                <button type="submit" style="margin-top: 5px;" class="btn spot like-btn" onclick="deletePic(@picture.picture_id)">Delete</button>
+                              </form>
+
+                          </div>
+                        </svg>
+                      </div>
+                      @* div for add cart button *@
+                      <div class="svg-wrapper">
+                        <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+                          <rect id="shape" height="40" width="150" />
+                          <div id="text">
+                            <a href="/order/create/@picture.picture_id" class="spot">Buy Print</a>
+                          </div>
+                        </svg>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+ @if (ViewBag.likes.Count > 0)
+ {
+  <h2>Likes</h2>
+ }
+    <div class="row row-cols-4">
+
+    @foreach (Picture picture in ViewBag.likes)
+    {
+      <div class="card col mx-2">
+        <div class="card-body">
+          <div class="card_title title-white">
+            <div class="container">
+              <div>
+                <div>
+                  <img src="@picture.fileName" class="card-img">
+                  <br>
+                  <div>
+                      @* div for add cart button *@
+                      <div class="svg-wrapper">
+                        <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+                          <rect id="shape" height="40" width="150" />
+                          <div id="text">
+                            @* <a href=""><span class="spot"></span>Add To Cart</a> *@
+                            <p style="margin-top: 5px;" class="spot">Buy Print</p>
+                          </div>
+                        </svg>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+  }
+    else
+  {
+    <div class="svg-wrapper">
+      <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+        <rect id="shape" height="40" width="150" />
+        <div id="text">
+          @* <a href=""><span class="spot"></span>Button 1</a> *@
+          <p style="margin-top: 5px;" class="spot">@Html.ActionLink("Register", "Register") </p>
+
+        </div>
+      </svg>
+    </div>
+    <div class="svg-wrapper">
+      <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+        <rect id="shape" height="40" width="150" />
+        <div id="text">
+          @* <a href=""><span class="spot"></span>Button 1</a> *@
+          <p style="margin-top: 5px;" class="spot">@Html.ActionLink("Log in", "Login")
+
+          </p>
+        </div>
+      </svg>
+    </div>
+  }
+
+<script>
+  function deletePic(id) {
+    const thisElement = document.getElementById(`pic-${id}`)
+    setTimeout(() => {
+      thisElement.parentElement.removeChild(thisElement);
+    }, 300)
+  }
+</script>
+
+</body>

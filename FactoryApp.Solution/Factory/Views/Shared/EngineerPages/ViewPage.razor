@@ -1,0 +1,42 @@
+@using Microsoft.AspNetCore.Components
+@using Factory.Models
+
+<div class="text-center">
+  <a class="btn btn-light" href="/engineer">Back</a>
+  <h1>@engineer.name</h1>
+  <a class="btn btn-info my-2" href="/engineer/update/@engineer.engineer_id">Edit</a>
+  @if (machines.Count() > 0)
+  {
+    <form action="/engineer/@engineer.engineer_id/add" method="post">
+      <select class="form-control w-25 m-auto" name="machine" id="machine">
+        @foreach (Machine mac in machines)
+        {
+          <option value="@mac.machine_id">@mac.name</option>
+        }
+      </select>
+      <br>
+      <button type="submit" class="btn btn-info">Add machine</button>
+    </form>
+    <br>
+  }
+  @if (matches.Count() > 0)
+  {
+    <h2>Machines:</h2>
+    <ul class="list-group">
+      <RemoveList engineer=@engineer machineList=@matches />
+    </ul>
+  }
+  else
+  {
+    <h2>@engineer.name has no machine licenses</h2>
+  }
+</div>
+
+@code {
+  [Parameter]
+  public Engineer engineer { get; set; }
+  [Parameter]
+  public List<Machine> machines { get; set; } = new List<Machine> { };
+  [Parameter]
+  public List<Machine> matches { get; set; } = new List<Machine> { };
+}

@@ -1,0 +1,16 @@
+@using Microsoft.AspNetCore.Components
+@using Factory.Models
+
+<div class="text-center">
+  <h1>Delete @engineer.name</h1>
+  <h2>Are you sure you want to delete engineer <span class="red">@engineer.name</span>?</h2>
+  <form action="/engineer/delete/@engineer.engineer_id" method="post">
+    <a href="/engineer" class="btn btn-info">Cancel</a>
+    <button class="btn btn-danger">Yes</button>
+  </form>
+</div>
+
+@code {
+  [Parameter]
+  public Engineer engineer { get; set; }
+}
